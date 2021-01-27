@@ -52,20 +52,20 @@ namespace volleyScoreboard
             // lblFirstTeam
             // 
             this.lblFirstTeam.AutoSize = true;
-            this.lblFirstTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblFirstTeam.Location = new System.Drawing.Point(26, 69);
+            this.lblFirstTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFirstTeam.Location = new System.Drawing.Point(41, 69);
             this.lblFirstTeam.Name = "lblFirstTeam";
-            this.lblFirstTeam.Size = new System.Drawing.Size(170, 39);
+            this.lblFirstTeam.Size = new System.Drawing.Size(145, 33);
             this.lblFirstTeam.TabIndex = 0;
             this.lblFirstTeam.Text = "1st Team";
             // 
             // lblSecondTeam
             // 
             this.lblSecondTeam.AutoSize = true;
-            this.lblSecondTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSecondTeam.Location = new System.Drawing.Point(409, 69);
+            this.lblSecondTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSecondTeam.Location = new System.Drawing.Point(401, 69);
             this.lblSecondTeam.Name = "lblSecondTeam";
-            this.lblSecondTeam.Size = new System.Drawing.Size(180, 39);
+            this.lblSecondTeam.Size = new System.Drawing.Size(154, 33);
             this.lblSecondTeam.TabIndex = 1;
             this.lblSecondTeam.Text = "2nd Team";
             // 
@@ -78,7 +78,6 @@ namespace volleyScoreboard
             this.lblScore1st.Size = new System.Drawing.Size(104, 73);
             this.lblScore1st.TabIndex = 2;
             this.lblScore1st.Text = "00";
-            this.lblScore1st.Leave += new System.EventHandler(this.lblScore1st_Leave);
             // 
             // lblScore2nd
             // 
@@ -99,8 +98,6 @@ namespace volleyScoreboard
             this.lblSet1st.Size = new System.Drawing.Size(68, 73);
             this.lblSet1st.TabIndex = 4;
             this.lblSet1st.Text = "0";
-            this.lblSet1st.Enter += new System.EventHandler(this.lblSet1st_Enter);
-            this.lblSet1st.Leave += new System.EventHandler(this.lblSet1st_Leave);
             // 
             // lblSet2nd
             // 
@@ -171,6 +168,7 @@ namespace volleyScoreboard
             this.btnGame.TabIndex = 10;
             this.btnGame.Text = "Game";
             this.btnGame.UseVisualStyleBackColor = true;
+            this.btnGame.Click += new System.EventHandler(this.btnGame_Click);
             // 
             // button1
             // 
@@ -244,6 +242,7 @@ namespace volleyScoreboard
             this.btnMenu.TabIndex = 17;
             this.btnMenu.Text = ">";
             this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // frmMain
             // 
@@ -299,4 +298,3 @@ namespace volleyScoreboard
         private System.Windows.Forms.Button btnMenu;
     }
 }
-
