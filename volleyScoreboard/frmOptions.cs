@@ -33,5 +33,21 @@ namespace volleyScoreboard
             clrDialog1.ShowDialog();
             btnColorSecond.BackColor = clrDialog1.Color;
         }
+
+        private void txtTeamFirstOpt_TextChanged(object sender, EventArgs e)
+        {
+            if (!txtTeamFirstOpt.Text.Contains("/"))
+                txtTeamFirstOpt.MaxLength = 10;
+            else
+                txtTeamFirstOpt.MaxLength = 20;
+        }
+
+        private void txtTeamSecondOpt_TextChanged(object sender, EventArgs e)
+        {
+            if (!txtTeamFirstOpt.Text.Contains("/"))
+                txtTeamFirstOpt.MaxLength = 10;
+            else
+                txtTeamFirstOpt.MaxLength = 20;
+        }
     }
 }

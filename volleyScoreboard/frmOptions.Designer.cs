@@ -50,6 +50,9 @@ namespace volleyScoreboard
             this.txtTeamFirstOpt.Name = "txtTeamFirstOpt";
             this.txtTeamFirstOpt.Size = new System.Drawing.Size(333, 40);
             this.txtTeamFirstOpt.TabIndex = 0;
+            this.txtTeamFirstOpt.TextChanged += new System.EventHandler(this.txtTeamFirstOpt_TextChanged);
+//            this.txtTeamFirstOpt.Enter += new System.EventHandler(this.txtTeamFirstOpt_Enter);
+  //          this.txtTeamFirstOpt.Leave += new System.EventHandler(this.txtTeamFirstOpt_Leave);
             // 
             // txtTeamSecondOpt
             // 
@@ -59,6 +62,7 @@ namespace volleyScoreboard
             this.txtTeamSecondOpt.Name = "txtTeamSecondOpt";
             this.txtTeamSecondOpt.Size = new System.Drawing.Size(333, 40);
             this.txtTeamSecondOpt.TabIndex = 1;
+            this.txtTeamSecondOpt.TextChanged += new System.EventHandler(this.txtTeamSecondOpt_TextChanged);
             // 
             // btnOK
             // 

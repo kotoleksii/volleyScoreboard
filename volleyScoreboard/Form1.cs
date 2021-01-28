@@ -55,42 +55,50 @@ namespace volleyScoreboard
                 MessageBox.Show($"Граємо далі, коли одна з команд не набере +2");
             }
             if (firstScore - 2 == secondScore && secondScore >= 20)
-                MessageBox.Show($"{lblFirstTeam.Text} WIN!");
+            {
+                firstTeamWinDialog();
+            }
             if (secondScore - 2 == firstScore && firstScore >= 20)
-                MessageBox.Show($"{lblSecondTeam.Text} WIN!");
+            {
+                secondTeamWinDialog();
+            }
 
+            if (firstScore >= 21 && secondScore < 20)
+            {
+                firstTeamWinDialog();
+            }
+            if (secondScore >= 21 && firstScore < 20)
+            {
+                secondTeamWinDialog();
+            }
+        }      
 
+        private void firstTeamWinDialog()
+        {
+            MessageBox.Show($"{lblFirstTeam.Text} WIN SET!");
 
-            //else
-            //{
-            //    if ((Convert.ToInt32(lblScore1st.Text) >= 21))
-            //    {
-            //        MessageBox.Show($"{lblFirstTeam.Text} WIN!");
+            lblScore1st.Text = "00";
+            lblScore2nd.Text = "00";
+            btnNeg1st.Enabled = false;
+            btnNeg2nd.Enabled = false;
+            lblSet1st.Text = (Convert.ToInt32(lblSet1st.Text) + 1).ToString();
 
-            //        lblScore1st.Text = "00";
-            //        lblScore2nd.Text = "00";
-            //        btnNeg1st.Enabled = false;
-            //        btnNeg2nd.Enabled = false;
-            //        lblSet1st.Text = (Convert.ToInt32(lblSet1st.Text) + 1).ToString();
+            if (lblSet1st.Text == "2")
+                MessageBox.Show($"Game Over\n{lblFirstTeam.Text} {lblSet1st.Text}:{lblSet2nd.Text} {lblSecondTeam.Text}");
+        }
 
-            //        if (lblSet1st.Text == "2")
-            //            MessageBox.Show($"Game Over\n{lblFirstTeam.Text} {lblSet1st.Text}:{lblSet2nd.Text} {lblSecondTeam.Text}");
-            //    }
-            //    else if ((Convert.ToInt32(lblScore2nd.Text) >= 21))
-            //    {
-            //        MessageBox.Show($"{lblSecondTeam.Text} WIN!");
+        private void secondTeamWinDialog()
+        {
+            MessageBox.Show($"{lblSecondTeam.Text} WIN SET!");
 
-            //        lblScore2nd.Text = "00";
-            //        lblScore1st.Text = "00";
-            //        btnNeg1st.Enabled = false;
-            //        btnNeg2nd.Enabled = false;
-            //        lblSet2nd.Text = (Convert.ToInt32(lblSet2nd.Text) + 1).ToString();
+            lblScore2nd.Text = "00";
+            lblScore1st.Text = "00";
+            btnNeg1st.Enabled = false;
+            btnNeg2nd.Enabled = false;
+            lblSet2nd.Text = (Convert.ToInt32(lblSet2nd.Text) + 1).ToString();
 
-            //        if (lblSet2nd.Text == "2")
-            //            MessageBox.Show($"Game Over\n{lblFirstTeam.Text} {lblSet1st.Text}:{lblSet2nd.Text} {lblSecondTeam.Text}");
-            //    }
-            //}
-
+            if (lblSet2nd.Text == "2")
+                MessageBox.Show($"Game Over\n{lblFirstTeam.Text} {lblSet1st.Text}:{lblSet2nd.Text} {lblSecondTeam.Text}");
         }
 
         private void btnNeg1st_Click(object sender, EventArgs e)
