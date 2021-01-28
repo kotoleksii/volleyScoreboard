@@ -17,7 +17,17 @@ namespace volleyScoreboard
         public frmMain()
         {
             InitializeComponent();
-            
+
+            BackColor = lblFirstTeam.BackColor = lblSecondTeam.BackColor = Color.FromArgb(51, 153, 204);
+            lblFirstTeam.ForeColor = lblSecondTeam.ForeColor = Color.White;
+
+            lblSet1st.ForeColor = lblSet2nd.ForeColor = lblScore1st.ForeColor = lblScore2nd.ForeColor = Color.FromArgb(247, 147, 30);
+            lblSet1st.BackColor = lblSet2nd.BackColor = lblScore1st.BackColor = lblScore2nd.BackColor = Color.White;
+
+            btnGame.ForeColor = btnSet.ForeColor = btnPlus1st.ForeColor = btnNeg1st.ForeColor =
+                btnPlus2nd.ForeColor = btnNeg2nd.ForeColor = btnMenu.ForeColor = Color.White;
+            btnPlus1st.BackColor = btnNeg1st.BackColor = btnPlus2nd.BackColor = btnNeg2nd.BackColor =
+                btnMenu.BackColor = Color.FromArgb(51, 153, 204);
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -34,7 +44,7 @@ namespace volleyScoreboard
 
             if ((Convert.ToInt32(lblScore1st.Text) + 1) < 10)
             {
-                lblScore1st.Text = $"0{(Convert.ToInt32(lblScore1st.Text) + 1).ToString()}";
+                lblScore1st.Text = $"{(Convert.ToInt32(lblScore1st.Text) + 1).ToString()}";
                 btnNeg1st.Enabled = true;
             }
             else
@@ -77,8 +87,8 @@ namespace volleyScoreboard
         {
             MessageBox.Show($"{lblFirstTeam.Text} WIN SET!");
 
-            lblScore1st.Text = "00";
-            lblScore2nd.Text = "00";
+            lblScore1st.Text = "0";
+            lblScore2nd.Text = "0";
             btnNeg1st.Enabled = false;
             btnNeg2nd.Enabled = false;
             lblSet1st.Text = (Convert.ToInt32(lblSet1st.Text) + 1).ToString();
@@ -91,8 +101,8 @@ namespace volleyScoreboard
         {
             MessageBox.Show($"{lblSecondTeam.Text} WIN SET!");
 
-            lblScore2nd.Text = "00";
-            lblScore1st.Text = "00";
+            lblScore2nd.Text = "0";
+            lblScore1st.Text = "0";
             btnNeg1st.Enabled = false;
             btnNeg2nd.Enabled = false;
             lblSet2nd.Text = (Convert.ToInt32(lblSet2nd.Text) + 1).ToString();
@@ -105,7 +115,7 @@ namespace volleyScoreboard
         {                     
             if ((Convert.ToInt32(lblScore1st.Text) - 1) < 10)
             {
-                lblScore1st.Text = $"0{(Convert.ToInt32(lblScore1st.Text) - 1).ToString()}";             
+                lblScore1st.Text = $"{(Convert.ToInt32(lblScore1st.Text) - 1).ToString()}";             
             }
             else
                 lblScore1st.Text = (Convert.ToInt32(lblScore1st.Text) - 1).ToString();
@@ -118,10 +128,9 @@ namespace volleyScoreboard
 
         private void btnPlus2nd_Click(object sender, EventArgs e)
         {           
-
             if ((Convert.ToInt32(lblScore2nd.Text) + 1) < 10)
             {
-                lblScore2nd.Text = $"0{(Convert.ToInt32(lblScore2nd.Text) + 1).ToString()}";
+                lblScore2nd.Text = $"{(Convert.ToInt32(lblScore2nd.Text) + 1).ToString()}";
                 btnNeg2nd.Enabled = true;
             }
             else
@@ -136,7 +145,7 @@ namespace volleyScoreboard
         {
             if ((Convert.ToInt32(lblScore2nd.Text) - 1) < 10)
             {
-                lblScore2nd.Text = $"0{(Convert.ToInt32(lblScore2nd.Text) - 1).ToString()}";
+                lblScore2nd.Text = $"{(Convert.ToInt32(lblScore2nd.Text) - 1).ToString()}";
             }
             else
                 lblScore2nd.Text = (Convert.ToInt32(lblScore2nd.Text) - 1).ToString();
@@ -191,8 +200,13 @@ namespace volleyScoreboard
             lblFirstTeam.Text = a;
             lblSecondTeam.Text = b;
 
-            lblFirstTeam.BackColor = modal.btnColorFirst.BackColor;
-            lblSecondTeam.BackColor = modal.btnColorSecond.BackColor;
+            lblColor1st.BackColor = modal.btnColorFirst.BackColor;
+            lblColor2nd.BackColor = modal.btnColorSecond.BackColor;
+        }
+
+        private void lblScore1st_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
