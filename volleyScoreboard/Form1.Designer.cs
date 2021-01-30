@@ -49,6 +49,17 @@ namespace volleyScoreboard
             this.btnMenu = new System.Windows.Forms.Button();
             this.lblColor1st = new System.Windows.Forms.Label();
             this.lblColor2nd = new System.Windows.Forms.Label();
+            this.lblStatTeam1st = new System.Windows.Forms.Label();
+            this.lblStatTeam2nd = new System.Windows.Forms.Label();
+            this.lblStat1stScoreSet1st = new System.Windows.Forms.Label();
+            this.lblStat1stScoreSet2nd = new System.Windows.Forms.Label();
+            this.lblStat2ndScoreSet1st = new System.Windows.Forms.Label();
+            this.lblStat2ndScoreSet2nd = new System.Windows.Forms.Label();
+            this.lblStat1stScoreSet3rd = new System.Windows.Forms.Label();
+            this.lblStat2ndScoreSet3rd = new System.Windows.Forms.Label();
+            this.lblStatsScore1st = new System.Windows.Forms.Label();
+            this.lblStatsScore2nd = new System.Windows.Forms.Label();
+            this.lblLine = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFirstTeam
@@ -72,9 +83,9 @@ namespace volleyScoreboard
             // lblScore1st
             // 
             this.lblScore1st.Font = new System.Drawing.Font("Galiver Sans Obliques", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblScore1st.Location = new System.Drawing.Point(211, 180);
+            this.lblScore1st.Location = new System.Drawing.Point(221, 180);
             this.lblScore1st.Name = "lblScore1st";
-            this.lblScore1st.Size = new System.Drawing.Size(120, 94);
+            this.lblScore1st.Size = new System.Drawing.Size(110, 94);
             this.lblScore1st.TabIndex = 2;
             this.lblScore1st.Text = "0";
             this.lblScore1st.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,7 +96,7 @@ namespace volleyScoreboard
             this.lblScore2nd.Font = new System.Drawing.Font("Galiver Sans Obliques", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblScore2nd.Location = new System.Drawing.Point(340, 180);
             this.lblScore2nd.Name = "lblScore2nd";
-            this.lblScore2nd.Size = new System.Drawing.Size(120, 94);
+            this.lblScore2nd.Size = new System.Drawing.Size(110, 94);
             this.lblScore2nd.TabIndex = 3;
             this.lblScore2nd.Text = "0";
             this.lblScore2nd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,11 +278,130 @@ namespace volleyScoreboard
             this.lblColor2nd.Size = new System.Drawing.Size(23, 85);
             this.lblColor2nd.TabIndex = 19;
             // 
+            // lblStatTeam1st
+            // 
+            this.lblStatTeam1st.AutoSize = true;
+            this.lblStatTeam1st.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStatTeam1st.Location = new System.Drawing.Point(78, 415);
+            this.lblStatTeam1st.Name = "lblStatTeam1st";
+            this.lblStatTeam1st.Size = new System.Drawing.Size(57, 22);
+            this.lblStatTeam1st.TabIndex = 20;
+            this.lblStatTeam1st.Text = "Team1";
+            // 
+            // lblStatTeam2nd
+            // 
+            this.lblStatTeam2nd.AutoSize = true;
+            this.lblStatTeam2nd.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStatTeam2nd.Location = new System.Drawing.Point(78, 473);
+            this.lblStatTeam2nd.Name = "lblStatTeam2nd";
+            this.lblStatTeam2nd.Size = new System.Drawing.Size(59, 22);
+            this.lblStatTeam2nd.TabIndex = 21;
+            this.lblStatTeam2nd.Text = "Team2";
+            // 
+            // lblStat1stScoreSet1st
+            // 
+            this.lblStat1stScoreSet1st.AutoSize = true;
+            this.lblStat1stScoreSet1st.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStat1stScoreSet1st.Location = new System.Drawing.Point(172, 415);
+            this.lblStat1stScoreSet1st.Name = "lblStat1stScoreSet1st";
+            this.lblStat1stScoreSet1st.Size = new System.Drawing.Size(18, 22);
+            this.lblStat1stScoreSet1st.TabIndex = 22;
+            this.lblStat1stScoreSet1st.Text = "0";
+            // 
+            // lblStat1stScoreSet2nd
+            // 
+            this.lblStat1stScoreSet2nd.AutoSize = true;
+            this.lblStat1stScoreSet2nd.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStat1stScoreSet2nd.Location = new System.Drawing.Point(209, 415);
+            this.lblStat1stScoreSet2nd.Name = "lblStat1stScoreSet2nd";
+            this.lblStat1stScoreSet2nd.Size = new System.Drawing.Size(18, 22);
+            this.lblStat1stScoreSet2nd.TabIndex = 23;
+            this.lblStat1stScoreSet2nd.Text = "0";
+            // 
+            // lblStat2ndScoreSet1st
+            // 
+            this.lblStat2ndScoreSet1st.AutoSize = true;
+            this.lblStat2ndScoreSet1st.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStat2ndScoreSet1st.Location = new System.Drawing.Point(172, 473);
+            this.lblStat2ndScoreSet1st.Name = "lblStat2ndScoreSet1st";
+            this.lblStat2ndScoreSet1st.Size = new System.Drawing.Size(18, 22);
+            this.lblStat2ndScoreSet1st.TabIndex = 24;
+            this.lblStat2ndScoreSet1st.Text = "0";
+            // 
+            // lblStat2ndScoreSet2nd
+            // 
+            this.lblStat2ndScoreSet2nd.AutoSize = true;
+            this.lblStat2ndScoreSet2nd.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStat2ndScoreSet2nd.Location = new System.Drawing.Point(209, 473);
+            this.lblStat2ndScoreSet2nd.Name = "lblStat2ndScoreSet2nd";
+            this.lblStat2ndScoreSet2nd.Size = new System.Drawing.Size(18, 22);
+            this.lblStat2ndScoreSet2nd.TabIndex = 25;
+            this.lblStat2ndScoreSet2nd.Text = "0";
+            // 
+            // lblStat1stScoreSet3rd
+            // 
+            this.lblStat1stScoreSet3rd.AutoSize = true;
+            this.lblStat1stScoreSet3rd.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStat1stScoreSet3rd.Location = new System.Drawing.Point(249, 415);
+            this.lblStat1stScoreSet3rd.Name = "lblStat1stScoreSet3rd";
+            this.lblStat1stScoreSet3rd.Size = new System.Drawing.Size(18, 22);
+            this.lblStat1stScoreSet3rd.TabIndex = 26;
+            this.lblStat1stScoreSet3rd.Text = "0";
+            // 
+            // lblStat2ndScoreSet3rd
+            // 
+            this.lblStat2ndScoreSet3rd.AutoSize = true;
+            this.lblStat2ndScoreSet3rd.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStat2ndScoreSet3rd.Location = new System.Drawing.Point(249, 473);
+            this.lblStat2ndScoreSet3rd.Name = "lblStat2ndScoreSet3rd";
+            this.lblStat2ndScoreSet3rd.Size = new System.Drawing.Size(18, 22);
+            this.lblStat2ndScoreSet3rd.TabIndex = 27;
+            this.lblStat2ndScoreSet3rd.Text = "0";
+            // 
+            // lblStatsScore1st
+            // 
+            this.lblStatsScore1st.AutoSize = true;
+            this.lblStatsScore1st.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStatsScore1st.Location = new System.Drawing.Point(313, 415);
+            this.lblStatsScore1st.Name = "lblStatsScore1st";
+            this.lblStatsScore1st.Size = new System.Drawing.Size(18, 22);
+            this.lblStatsScore1st.TabIndex = 28;
+            this.lblStatsScore1st.Text = "0";
+            // 
+            // lblStatsScore2nd
+            // 
+            this.lblStatsScore2nd.AutoSize = true;
+            this.lblStatsScore2nd.Font = new System.Drawing.Font("Galiver Sans Obliques", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblStatsScore2nd.Location = new System.Drawing.Point(313, 473);
+            this.lblStatsScore2nd.Name = "lblStatsScore2nd";
+            this.lblStatsScore2nd.Size = new System.Drawing.Size(18, 22);
+            this.lblStatsScore2nd.TabIndex = 29;
+            this.lblStatsScore2nd.Text = "0";
+            // 
+            // lblLine
+            // 
+            this.lblLine.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblLine.Location = new System.Drawing.Point(291, 413);
+            this.lblLine.Name = "lblLine";
+            this.lblLine.Size = new System.Drawing.Size(2, 86);
+            this.lblLine.TabIndex = 30;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 411);
+            this.ClientSize = new System.Drawing.Size(681, 522);
+            this.Controls.Add(this.lblLine);
+            this.Controls.Add(this.lblStatsScore2nd);
+            this.Controls.Add(this.lblStatsScore1st);
+            this.Controls.Add(this.lblStat2ndScoreSet3rd);
+            this.Controls.Add(this.lblStat1stScoreSet3rd);
+            this.Controls.Add(this.lblStat2ndScoreSet2nd);
+            this.Controls.Add(this.lblStat2ndScoreSet1st);
+            this.Controls.Add(this.lblStat1stScoreSet2nd);
+            this.Controls.Add(this.lblStat1stScoreSet1st);
+            this.Controls.Add(this.lblStatTeam2nd);
+            this.Controls.Add(this.lblStatTeam1st);
             this.Controls.Add(this.lblColor2nd);
             this.Controls.Add(this.lblColor1st);
             this.Controls.Add(this.btnMenu);
@@ -292,11 +422,14 @@ namespace volleyScoreboard
             this.Controls.Add(this.lblScore1st);
             this.Controls.Add(this.lblSecondTeam);
             this.Controls.Add(this.lblFirstTeam);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VolleyScore";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -322,5 +455,16 @@ namespace volleyScoreboard
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Label lblColor1st;
         private System.Windows.Forms.Label lblColor2nd;
+        private System.Windows.Forms.Label lblStatTeam1st;
+        private System.Windows.Forms.Label lblStatTeam2nd;
+        private System.Windows.Forms.Label lblStat1stScoreSet1st;
+        private System.Windows.Forms.Label lblStat1stScoreSet2nd;
+        private System.Windows.Forms.Label lblStat2ndScoreSet1st;
+        private System.Windows.Forms.Label lblStat2ndScoreSet2nd;
+        private System.Windows.Forms.Label lblStat1stScoreSet3rd;
+        private System.Windows.Forms.Label lblStat2ndScoreSet3rd;
+        private System.Windows.Forms.Label lblStatsScore1st;
+        private System.Windows.Forms.Label lblStatsScore2nd;
+        private System.Windows.Forms.Label lblLine;
     }
 }

@@ -45,19 +45,17 @@ namespace volleyScoreboard
             // txtTeamFirstOpt
             // 
             this.txtTeamFirstOpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtTeamFirstOpt.Location = new System.Drawing.Point(33, 29);
+            this.txtTeamFirstOpt.Location = new System.Drawing.Point(37, 47);
             this.txtTeamFirstOpt.MaxLength = 20;
             this.txtTeamFirstOpt.Name = "txtTeamFirstOpt";
             this.txtTeamFirstOpt.Size = new System.Drawing.Size(333, 40);
             this.txtTeamFirstOpt.TabIndex = 0;
             this.txtTeamFirstOpt.TextChanged += new System.EventHandler(this.txtTeamFirstOpt_TextChanged);
-//            this.txtTeamFirstOpt.Enter += new System.EventHandler(this.txtTeamFirstOpt_Enter);
-  //          this.txtTeamFirstOpt.Leave += new System.EventHandler(this.txtTeamFirstOpt_Leave);
             // 
             // txtTeamSecondOpt
             // 
             this.txtTeamSecondOpt.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtTeamSecondOpt.Location = new System.Drawing.Point(33, 102);
+            this.txtTeamSecondOpt.Location = new System.Drawing.Point(37, 120);
             this.txtTeamSecondOpt.MaxLength = 20;
             this.txtTeamSecondOpt.Name = "txtTeamSecondOpt";
             this.txtTeamSecondOpt.Size = new System.Drawing.Size(333, 40);
@@ -68,7 +66,7 @@ namespace volleyScoreboard
             // 
             this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnOK.Location = new System.Drawing.Point(114, 160);
+            this.btnOK.Location = new System.Drawing.Point(118, 178);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(89, 34);
             this.btnOK.TabIndex = 2;
@@ -79,7 +77,7 @@ namespace volleyScoreboard
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnCancel.Location = new System.Drawing.Point(216, 160);
+            this.btnCancel.Location = new System.Drawing.Point(220, 178);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(89, 34);
             this.btnCancel.TabIndex = 3;
@@ -88,7 +86,7 @@ namespace volleyScoreboard
             // 
             // btnColorFirst
             // 
-            this.btnColorFirst.Location = new System.Drawing.Point(392, 30);
+            this.btnColorFirst.Location = new System.Drawing.Point(396, 48);
             this.btnColorFirst.Name = "btnColorFirst";
             this.btnColorFirst.Size = new System.Drawing.Size(55, 39);
             this.btnColorFirst.TabIndex = 4;
@@ -97,7 +95,7 @@ namespace volleyScoreboard
             // 
             // btnColorSecond
             // 
-            this.btnColorSecond.Location = new System.Drawing.Point(392, 103);
+            this.btnColorSecond.Location = new System.Drawing.Point(396, 121);
             this.btnColorSecond.Name = "btnColorSecond";
             this.btnColorSecond.Size = new System.Drawing.Size(55, 39);
             this.btnColorSecond.TabIndex = 5;
@@ -108,7 +106,7 @@ namespace volleyScoreboard
             // 
             this.lblTeam1.AutoSize = true;
             this.lblTeam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTeam1.Location = new System.Drawing.Point(30, 8);
+            this.lblTeam1.Location = new System.Drawing.Point(34, 26);
             this.lblTeam1.Name = "lblTeam1";
             this.lblTeam1.Size = new System.Drawing.Size(64, 18);
             this.lblTeam1.TabIndex = 6;
@@ -118,7 +116,7 @@ namespace volleyScoreboard
             // 
             this.lblTeam2.AutoSize = true;
             this.lblTeam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblTeam2.Location = new System.Drawing.Point(30, 81);
+            this.lblTeam2.Location = new System.Drawing.Point(34, 99);
             this.lblTeam2.Name = "lblTeam2";
             this.lblTeam2.Size = new System.Drawing.Size(64, 18);
             this.lblTeam2.TabIndex = 7;
@@ -128,7 +126,7 @@ namespace volleyScoreboard
             // 
             this.lblColor1.AutoSize = true;
             this.lblColor1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblColor1.Location = new System.Drawing.Point(389, 8);
+            this.lblColor1.Location = new System.Drawing.Point(393, 26);
             this.lblColor1.Name = "lblColor1";
             this.lblColor1.Size = new System.Drawing.Size(64, 18);
             this.lblColor1.TabIndex = 8;
@@ -138,7 +136,7 @@ namespace volleyScoreboard
             // 
             this.lblColor2.AutoSize = true;
             this.lblColor2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblColor2.Location = new System.Drawing.Point(389, 81);
+            this.lblColor2.Location = new System.Drawing.Point(393, 99);
             this.lblColor2.Name = "lblColor2";
             this.lblColor2.Size = new System.Drawing.Size(64, 18);
             this.lblColor2.TabIndex = 9;
@@ -148,7 +146,7 @@ namespace volleyScoreboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 206);
+            this.ClientSize = new System.Drawing.Size(480, 236);
             this.Controls.Add(this.lblColor2);
             this.Controls.Add(this.lblColor1);
             this.Controls.Add(this.lblTeam2);
@@ -159,6 +157,7 @@ namespace volleyScoreboard
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtTeamSecondOpt);
             this.Controls.Add(this.txtTeamFirstOpt);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmOptions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmOptions";

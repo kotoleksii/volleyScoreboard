@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Serialization;
@@ -31,24 +32,45 @@ namespace volleyScoreboard
         }
 
         private void frmMain_Load(object sender, EventArgs e)
-        {
+        {          
             btnNeg1st.Enabled = false;
-            btnNeg2nd.Enabled = false;
+            btnNeg2nd.Enabled = false;        
+        }
 
-            
+        private void teamStats()
+        {
+            if (lblSet1st.Text == "0" && lblSet2nd.Text == "0")
+            {
+                lblStat1stScoreSet1st.Text = lblScore1st.Text;
+                lblStat2ndScoreSet1st.Text = lblScore2nd.Text;
+            }
+            if ((lblSet2nd.Text == "1" && lblSet1st.Text == "0") || (lblSet1st.Text == "1" && lblSet2nd.Text == "0"))
+            {
+                lblStat1stScoreSet2nd.Text = lblScore1st.Text;
+                lblStat2ndScoreSet2nd.Text = lblScore2nd.Text;
+            }
+            if (lblSet2nd.Text == "1" && lblSet1st.Text == "1")
+            {
+                lblStat1stScoreSet3rd.Text = lblScore1st.Text;
+                lblStat2ndScoreSet3rd.Text = lblScore2nd.Text;
+            }
+            lblStatsScore1st.Text = lblSet1st.Text;
+            lblStatsScore2nd.Text = lblSet2nd.Text;
         }
 
         private void btnPlus1st_Click(object sender, EventArgs e)
         {
-
-
             if ((Convert.ToInt32(lblScore1st.Text) + 1) < 10)
             {
                 lblScore1st.Text = $"{(Convert.ToInt32(lblScore1st.Text) + 1).ToString()}";
                 btnNeg1st.Enabled = true;
             }
             else
+            {
                 lblScore1st.Text = (Convert.ToInt32(lblScore1st.Text) + 1).ToString();
+            }
+
+            teamStats();
 
             teamWinDialog();
 
@@ -91,9 +113,10 @@ namespace volleyScoreboard
             lblScore2nd.Text = "0";
             btnNeg1st.Enabled = false;
             btnNeg2nd.Enabled = false;
-            lblSet1st.Text = (Convert.ToInt32(lblSet1st.Text) + 1).ToString();
+            lblStatsScore1st.Text = lblSet1st.Text = (Convert.ToInt32(lblSet1st.Text) + 1).ToString();           
 
             if (lblSet1st.Text == "2")
+                
                 MessageBox.Show($"Game Over\n{lblFirstTeam.Text} {lblSet1st.Text}:{lblSet2nd.Text} {lblSecondTeam.Text}");
         }
 
@@ -105,9 +128,9 @@ namespace volleyScoreboard
             lblScore1st.Text = "0";
             btnNeg1st.Enabled = false;
             btnNeg2nd.Enabled = false;
-            lblSet2nd.Text = (Convert.ToInt32(lblSet2nd.Text) + 1).ToString();
+            lblStatsScore2nd.Text = lblSet2nd.Text = (Convert.ToInt32(lblSet2nd.Text) + 1).ToString();
 
-            if (lblSet2nd.Text == "2")
+            if (lblSet2nd.Text == "2")               
                 MessageBox.Show($"Game Over\n{lblFirstTeam.Text} {lblSet1st.Text}:{lblSet2nd.Text} {lblSecondTeam.Text}");
         }
 
@@ -123,6 +146,8 @@ namespace volleyScoreboard
             if ((Convert.ToInt32(lblScore1st.Text)) <= 0)
                 btnNeg1st.Enabled = false;
 
+            teamStats();
+
             writeJSON();
         }        
 
@@ -135,6 +160,8 @@ namespace volleyScoreboard
             }
             else
                 lblScore2nd.Text = (Convert.ToInt32(lblScore2nd.Text) + 1).ToString();
+
+            teamStats();
 
             teamWinDialog();
 
@@ -152,6 +179,8 @@ namespace volleyScoreboard
 
             if ((Convert.ToInt32(lblScore2nd.Text)) <= 0)
                 btnNeg2nd.Enabled = false;
+
+            teamStats();
 
             writeJSON();
         }
@@ -187,21 +216,26 @@ namespace volleyScoreboard
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
-        {
-            modal.Location = new Point(Location.X + btnMenu.Width, btnMenu.Location.Y + btnMenu.Height + 20);
+        {          
+            modal.Location = new Point(Location.X + btnMenu.Width, btnMenu.Location.Y + btnMenu.Height - 30);
+            Opacity = 0.8;
 
             if (modal.ShowDialog() == DialogResult.Cancel)
+            {
+                Opacity = 1;
                 return;
+            }
 
-            string a = modal.txtTeamFirstOpt.Text.Replace("/", "\n");
-            string b = modal.txtTeamSecondOpt.Text.Replace("/", "\n");
+            string firstTeamTitle = modal.txtTeamFirstOpt.Text.Replace("/", "\n");
+            string secondTeamTitle = modal.txtTeamSecondOpt.Text.Replace("/", "\n");
 
-
-            lblFirstTeam.Text = a;
-            lblSecondTeam.Text = b;
+            lblFirstTeam.Text = lblStatTeam1st.Text = firstTeamTitle;
+            lblSecondTeam.Text = lblStatTeam2nd.Text = secondTeamTitle;
 
             lblColor1st.BackColor = modal.btnColorFirst.BackColor;
             lblColor2nd.BackColor = modal.btnColorSecond.BackColor;
+
+            Opacity = 1;
         }
 
         private void lblScore1st_Click(object sender, EventArgs e)
